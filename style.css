@@ -1,0 +1,257 @@
+/* =================================
+   CONFIGURACION GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+header {
+    background-color: #050505;
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 1px solid #222222;
+}
+
+header h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #aaaaaa;
+}
+
+
+/* =================================
+   CATALOGO
+================================= */
+
+.catalogo {
+    max-width: 1250px;
+    margin: 50px auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* =================================
+   TARJETAS DE PRODUCTOS
+================================= */
+
+.producto {
+    background-color: #111111;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s, border-color 0.3s;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+    border-color: #00c853;
+}
+
+
+/* =================================
+   IMAGENES
+================================= */
+
+.contenedor-imagen {
+    width: 100%;
+    height: 290px;
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #080808;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =================================
+   INFORMACION
+================================= */
+
+.informacion {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.informacion h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+
+/* =================================
+   PRECIO
+================================= */
+
+.precio {
+    color: #00c853;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   DETALLES
+================================= */
+
+.informacion h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.informacion ul {
+    margin-left: 20px;
+    line-height: 29px;
+    color: #cccccc;
+}
+
+.descripcion {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   BOTON WHATSAPP
+================================= */
+
+.boton {
+    display: block;
+    text-align: center;
+
+    background-color: #00c853;
+    color: #000000;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 14px 15px;
+    border-radius: 8px;
+
+    margin-top: auto;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #00e676;
+    transform: scale(1.03);
+}
+
+
+/* =================================
+   PIE DE PAGINA
+================================= */
+
+footer {
+    background-color: #050505;
+    border-top: 1px solid #222222;
+
+    color: #888888;
+    text-align: center;
+
+    padding: 25px;
+    line-height: 25px;
+}
+
+
+/* =================================
+   TABLETS
+================================= */
+
+@media (max-width: 950px) {
+
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* =================================
+   CELULARES
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        margin: 25px auto;
+        gap: 25px;
+    }
+
+    .contenedor-imagen {
+        height: 300px;
+    }
+
+    .informacion {
+        padding: 22px;
+    }
+
+    .informacion h2 {
+        font-size: 22px;
+    }
+
+    .precio {
+        font-size: 30px;
+    }
+
+}
+
